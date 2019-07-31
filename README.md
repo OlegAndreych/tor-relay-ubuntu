@@ -1,5 +1,5 @@
-Recources for this docker image are based (or just copied) from https://github.com/jessfraz/dockerfiles.
-Main reason for this is that original dockerfile produced an image with not recommended version of tor.
+Recources for this docker image are based (or just copied) from https://github.com/jessfraz/dockerfiles.  
+Main reason for this is that original dockerfile produced an image with not recommended version of tor.  
 This image based on ubuntu with tor version from tor package repository (https://2019.www.torproject.org/docs/debian.html.en#ubuntu).
 
  ### Environment variables
