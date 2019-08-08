@@ -14,7 +14,7 @@ for relaytype in bridge middle exit; do
 	sed -i "s/RELAY_PORT/${RELAY_PORT}/g" "$file"
 
 	if [ -n "${ADDRESS}" ]; then
-		sed -i "/^#Address ADDRESS/s/ADDRESS/${ADDRESS}/g" "$file"
+		sed -i "/^#Address ADDRESS/s/#Address ADDRESS/Address ${ADDRESS}/g" "$file"
 	fi
 done
 
