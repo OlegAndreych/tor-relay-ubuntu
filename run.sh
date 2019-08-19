@@ -18,4 +18,4 @@ for relaytype in bridge middle exit; do
 	fi
 done
 
-exec tor -f "/etc/tor/torrc.${RELAY_TYPE}"
+exec tor -f "/etc/tor/torrc.${RELAY_TYPE}" --DataDirectory "/home/tor/.tor"

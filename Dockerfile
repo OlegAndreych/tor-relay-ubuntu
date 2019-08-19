@@ -47,14 +47,15 @@ ENV RELAY_BANDWIDTH_RATE 100 KBytes
 ENV RELAY_BANDWIDTH_BURST 200 KBytes
 ENV RELAY_PORT 9001
 
-RUN useradd -ms /bin/bash tor
+RUN groupadd -g 1000 tor && useradd -m -d /home/tor -g 1000 tor
 
 # make sure files are owned by tor user
 RUN chown -R tor /etc/tor
 
-RUN mkdir /var/lib/tor/.tor
-VOLUME /var/lib/tor/.tor
-RUN chown -R tor /var/lib/tor/.tor
+RUN mkdir /home/tor/.tor
+RUN chown -R tor /home/tor/.tor
+
+VOLUME ["/home/tor/.tor"]
 
 USER tor
 
