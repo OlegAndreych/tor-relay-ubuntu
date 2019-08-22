@@ -15,3 +15,5 @@ This image based on ubuntu with tor version from tor package repository (https:/
 | **RELAY_BANDWIDTH_BURST**    | Allow temporary bursts up to a certain amount                                | 200 KBytes    |
 | **RELAY_PORT**               | Default port used for incoming Tor connections (ORPort)                      | 9001          |
 | **ADDRESS**                  | External IP address/hostname                                                 | none          |
+
+DataDirectory for the relay defined as a volume at `/home/tor/.tor`.
